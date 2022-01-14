@@ -1,0 +1,15 @@
+import cv2
+
+cap = cv2.VideoCapture(0)
+cap.set(3,1024)
+cap.set(4,1280)
+
+while True:
+    _, img = cap.read()
+    # modsize = cv2.resize(img,(1024,1280))
+    cv2.imshow('frame-1',img)
+    # cv2.imshow('frame-2',modsize)
+
+    print(img.shape)
+
+    cv2.waitKey(1)
